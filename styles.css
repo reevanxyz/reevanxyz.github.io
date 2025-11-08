@@ -1,4 +1,45 @@
-/* Reset & base */
+/* Preloader */
+#preloader {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#fefefe;
+  z-index:9999;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#preloader-content p {
+  font-family:"JetBrains Mono", monospace;
+  font-size:24px;
+  color:#3a2f6d;
+}
+
+/* Screen warning */
+#screen-warning {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000c;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:"JetBrains Mono", monospace;
+  font-size:28px;
+  text-align:center;
+  padding:2rem;
+  z-index:10000;
+  display:none; /* hidden by default */
+  cursor:pointer;
+}
+
+
 * {
     margin: 0;
     padding: 0;

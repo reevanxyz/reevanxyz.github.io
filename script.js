@@ -1,3 +1,56 @@
+// Image preloading
+const images = [
+  '/images/assets/bg1.png',
+  '/images/assets/bg2.png',
+  '/images/assets/bg3.png',
+  '/images/assets/bg4.png',
+    '/images/assets/bg5.jpg',
+  '/images/assets/homeL.png',
+  '/images/assets/homeR.png',
+  '/images/assets/seal.png',
+  '/images/assets/bird.png',
+  '/images/assets/bordertama.png',
+  '/images/assets/clover.png',
+  '/images/assets/lightbulb.png',
+  '/images/assets/desk.png',
+  '/images/assets/phone.png',
+  '/images/assets/popupinterface.png',
+  '/images/projects/habittracker.png',
+  '/images/projects/project2.png',
+  '/images/projects/project3.png',
+  '/images/projects/website.png',
+  '/images/projects/website2.png',
+  '/images/projects/app.jpg'
+];
+
+let loadedCount = 0;
+
+function imageLoaded() {
+  loadedCount++;
+  if (loadedCount === images.length) {
+    document.getElementById('preloader').style.display = 'none';
+    checkScreenSize();
+  }
+}
+
+images.forEach(src => {
+  const img = new Image();
+  img.src = src;
+  img.onload = imageLoaded;
+  img.onerror = imageLoaded;
+});
+
+// Screen size warning
+function checkScreenSize() {
+  const warning = document.getElementById('screen-warning');
+  if(window.innerWidth !== 1920 || window.innerHeight !== 1080){
+    warning.style.display = 'flex';
+    warning.addEventListener('click', () => {
+      warning.style.display = 'none';
+    });
+  }
+}
+
 const sections = document.querySelectorAll('.section');
 const revealSection = (entries, observer) => {
     entries.forEach(entry => {
