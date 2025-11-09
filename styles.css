@@ -39,14 +39,6 @@
   cursor:pointer;
 }
 
-img {
-  user-drag: none;    
-  -webkit-user-drag: none; 
-  -moz-user-drag: none; 
-  -o-user-drag: none;    
-  pointer-events: none;   
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -170,3 +162,4 @@ h2 {
 
 .peni{ text-align:center; max-width:80%; margin:0 auto; line-height:1.5; }
 .goalstxt{ position:absolute; z-index:2; bottom:160px; left:620px; transform:rotate(-5deg); }
+
