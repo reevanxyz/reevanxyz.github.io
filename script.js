@@ -131,7 +131,3 @@ document.getElementById("prevProject").addEventListener("click",()=>{
     currentPage=(currentPage-1+pages.length)%pages.length;
     projectContent.innerHTML=pages[currentPage];
 });
-
-document.querySelectorAll('img').forEach(img => {
-  img.ondragstart = () => false;
-});
